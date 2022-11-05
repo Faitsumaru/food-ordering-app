@@ -3,9 +3,8 @@ import { AddProduct } from './AddProduct';
 
 export const ProductsPreviewCard = ({ product, onAddProduct }) => {
 
-    // eslint-disable-next-line
     const addProduct = () => {
-        // TODO: create after setting up redux state for cart to add product there
+        onAddProduct(product);
     }
 
     return (
@@ -13,7 +12,7 @@ export const ProductsPreviewCard = ({ product, onAddProduct }) => {
             <img src={product.imageUrl} alt={product.name} />
             <h2 className='pb-2 text-lg'>{ product.name }</h2>
             <p className='mb-2 h-20 line-clamp-4'>{ product.description }</p>
-            <AddProduct onAddProduct={AddProduct} />
+            <AddProduct onAddProduct={addProduct} />
         </div>
     )
 }
