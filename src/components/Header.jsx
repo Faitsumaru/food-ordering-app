@@ -25,7 +25,7 @@ export const Header = ({ cartCount }) => {
             <div className="header__nav-auth-wrapper flex items-center justify-center space-x-8">
                 <Link to="/cart" className='mr-4 relative'>
                     <img src={ cartIcon } alt="cart" />
-                    { cartCount > 0 ? <div className='rounded-full bg-yellow-400 text-white inline-flex justify-center items-center w-full absolute -top-1 -right-1'>{ cartCount }</div> : null }
+                    { cartCount > 0 ? <div className='rounded-full bg-yellow-400 text-white inline-flex justify-center items-center w-full absolute -top-1 -right-3 drop-shadow'>{ cartCount }</div> : null }
                 </Link>
                 <Link to="/login" className='hover:text-yellow-400 transition ease-in duration-300'>Log In</Link>
                 <Link to="/register" className='hover:text-yellow-400 transition ease-in duration-300'>Sign Up</Link>
