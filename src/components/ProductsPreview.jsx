@@ -45,20 +45,22 @@ export const ProductsPreview = () => {
     }
 
     return (
-        <div className="container mx-auto pb-4 w-2/3 text-white bg-black">
+        <div className="bg-black">
+            <div className="container mx-auto pb-4 w-2/3 text-white">
 
-            <Carousel responsive={responsive}>
-                {
-                    products.length > 0 && products.map((product, idx) => {
-                        return (
-                            <div className="w-full p-4">
-                                <ProductsPreviewCard key={idx} product={product} onAddProduct={onAddProduct} />
-                            </div>
-                        )
-                    })
-                }
-            </Carousel>
+                <Carousel responsive={responsive}>
+                    {
+                        products.length > 0 && products.map((product, idx) => {
+                            return (
+                                <div className="w-full p-4">
+                                    <ProductsPreviewCard key={idx} product={product} onAddProduct={onAddProduct} />
+                                </div>
+                            )
+                        })
+                    }
+                </Carousel>
 
+            </div>
         </div>
     )
 }
