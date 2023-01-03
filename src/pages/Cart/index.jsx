@@ -7,6 +7,7 @@ import Button from '../../components/elements/Button';
 import { ReactComponent as ArrowRightSVG } from "../../assets/icons/arrow-right-long-svgrepo-com.svg";
 import { AddressForm } from '../../components/AddressForm';
 import { ProductsSummary } from '../../components/ProductsSummary';
+import { StripeWrapper } from "../../components/PaymentForm";
 
 const Cart = () => {
   const cart = useSelector(cartProducts);
@@ -42,7 +43,7 @@ const Cart = () => {
         </div>
 
         <div className={`tabs ${currentTab !== 'Payment' ? 'hidden' : ''}`}>
-          Payment form
+          <StripeWrapper />
         </div>
       </div>
     </div>

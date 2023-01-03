@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import { setAddress } from "../stores/userInfo/addressSlice";
 
 export const AddressForm = ({ onTabSwitch }) => {
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, formState: { errors } } = useForm();
 
     const dispatch = useDispatch();
 
@@ -22,12 +22,13 @@ export const AddressForm = ({ onTabSwitch }) => {
             <div className="mb-5">
                 <label htmlFor="streetAddress" className="block mb-2 text-sm font-bold text-grey-700">Street Address</label>
                 <input 
-                    {...register('address')}
+                    {...register('address' , { required: true })}
                     className="w-full px-3 py-2 mb-3 text-sm leading-tight text-grey-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
                     id="street address"
                     type="text"
                     placeholder="Street Address" 
                 />
+                {errors.address && <span className="text-red-500 mb-1">This field is required</span>}
             </div>
 
             <div className="mb-5 md:flex md:justify-between">
