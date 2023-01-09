@@ -1,12 +1,39 @@
-import React from 'react' //shortcut: 'rafce'
-
 import { Link } from 'react-router-dom';
-
 import logo from '../assets/images/foody.png';
 import cartIcon from '../assets/icons/cart.svg';
+import { useNavigate } from 'react-router-dom';
+import Button from "./elements/Button";
+import { useEffect, useState } from 'react';
 
 
 export const Header = ({ cartCount }) => {
+    const navigate = useNavigate();
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+    const handleLogout = () =>  {
+        sessionStorage.removeItem('Auth token');
+        sessionStorage.removeItem('User ID');
+        window.dispatchEvent(new Event('storage'))
+        navigate('/');
+        // window.location.reload(true);
+    }
+
+    useEffect(() => {
+        const checkAuthToken = () => {
+            const token = sessionStorage.getItem('Auth token');
+            if (token)
+                setIsLoggedIn(true);
+            else 
+                setIsLoggedIn(false);
+        }
+
+        window.addEventListener('storage', checkAuthToken);
+
+        return () => {
+            window.removeEventListener('storage', checkAuthToken);
+        }
+    }, [])
+    
   return (
 
     <nav id='header' className='bg-black text-white'>
@@ -27,8 +54,16 @@ export const Header = ({ cartCount }) => {
                     <img src={ cartIcon } alt="cart" />
                     { cartCount > 0 ? <div className='rounded-full bg-yellow-400 text-white inline-flex justify-center items-center w-full absolute -top-1 -right-3 drop-shadow'>{ cartCount }</div> : null }
                 </Link>
-                <Link to="/login" className='hover:text-yellow-400 transition ease-in duration-300'>Log In</Link>
-                <Link to="/register" className='hover:text-yellow-400 transition ease-in duration-300'>Sign Up</Link>
+                {
+                    isLoggedIn ?
+                    <>
+                        <Button onClick={handleLogout}>Log Out</Button>
+                    </> :
+                    <>
+                        <Link to="/login" className='hover:text-yellow-400 transition ease-in duration-300'>Log In</Link>
+                        <Link to="/register" className='hover:text-yellow-400 transition ease-in duration-300'>Sign Up</Link>
+                    </>
+                }
             </div>
         </div>
     </nav>
