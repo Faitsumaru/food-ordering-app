@@ -47,9 +47,9 @@ const Login = () => {
     
     }
     return (
-        <div className="h-screen bg-black flex  items-center justify-center">
-            <div className="rounded-lg max-w-md w-full flex flex-col items-center justify-center relative">
-                <div className="absolute inset-0 transition duration-300 animate-pink blur  gradient bg-gradient-to-tr from-rose-500 to-yellow-500"></div>
+        <div className="h-4/6 bg-black flex items-center justify-center max-sm:h-4/5">
+            <div className="rounded-lg max-w-md w-full max-sm:w-4/5 flex flex-col items-center justify-center relative">
+                <div className="absolute inset-0 transition duration-300 animate-pink blur gradient bg-gradient-to-tr from-rose-500 to-yellow-500"></div>
                 <div className="p-10 rounded-xl z-10 w-full h-full bg-black">
                     <h5 className="text-3xl">Login</h5>
                     

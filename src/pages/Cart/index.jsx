@@ -16,15 +16,15 @@ const Cart = () => {
 
   if(!cart || cart.length === 0) {
       return (
-        <div className="bg-white h-full text-block flex justify-center px-6 py-10 font-bold">
-          <h1 className='text-xl sm:text-3xl'>Your Cart is empty!</h1>
+        <div className="bg-gradient-to-tl from-yellow-500 to-rose-500 h-4/6 text-block flex justify-center px-6 py-24 font-bold">
+          <h1 className='text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white'>Your Cart is empty!</h1>
         </div>
       )
     }
 
   return (
-    <div className="bg-black">
-      <div className="bg-white h-fit text-black mx-auto mt-2 border border-gray-200 p-4 md:w-2/3 rounded-lg shadow-md sm:p-6 lg:p-8">
+    <div className="bg-black lg:h-4/6 md:h-1/2">
+      <div className="bg-white h-fit text-black mx-auto border border-gray-200 p-4 md:w-2/3 rounded-lg shadow-md sm:p-6 lg:p-8">
         <Tabs list={tabs} onTabSwitch={handleTabSwitch} activeTab={currentTab} />
 
         <div className={`tabs ${currentTab !== 'Summary' ? 'hidden' : ''}`}>

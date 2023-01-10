@@ -15,7 +15,7 @@ export const Header = ({ cartCount }) => {
         sessionStorage.removeItem('User ID');
         window.dispatchEvent(new Event('storage'))
         navigate('/');
-        // window.location.reload(true);
+        window.location.reload(true);
     }
 
     useEffect(() => {
@@ -36,17 +36,17 @@ export const Header = ({ cartCount }) => {
     
   return (
 
-    <nav id='header' className='bg-black text-white'>
-        <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
-            <div className="header__logo-wrapper pl-4 flex items-center">
+    <nav id='header' className='bg-black text-white max-sm:gradient max-sm:bg-gradient-to-tr max-sm:from-rose-500 max-sm:to-yellow-500 max-sm:border-solid max-sm:border-b-2 max-sm:border-yellow-200'>
+        <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2 max-sm:block max-sm:pb-9">
+            <div className="header__logo-wrapper pl-4 flex items-center justify-center">
                 <Link to="/" className='toggleColor text-white no-underline hover:no_underline font-bold text-2xl lg:text-4xl'>
                     <img src={ logo } alt="logo" className='w-40 h-40 object-cover'/>
                 </Link>
             </div>
 
-            <div className="header__nav-menu-wrapper flex items-center justify-between space-x-14">
+            <div className="header__nav-menu-wrapper flex items-center justify-between space-x-14 max-sm:justify-center max-sm:pb-6">
                 <Link to="/" className='text-xl hover:text-yellow-400 transition ease-in duration-300'>Home</Link>
-                <Link to="#about" className='text-xl hover:text-yellow-400 transition ease-in duration-300'>About</Link>
+                <Link to="/about" className='text-xl hover:text-yellow-400 transition ease-in duration-300'>About</Link>
             </div>
 
             <div className="header__nav-auth-wrapper flex items-center justify-center space-x-8">

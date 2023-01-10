@@ -31,7 +31,7 @@ const Menu = () => {
   }
 
   return (
-    <div className='bg-white'>
+    <div className='bg-white h-4/6 max-sm:h-max'>
       {
         products.status !== 'fulfilled' ?
         <div>Loading...</div> :
@@ -44,7 +44,7 @@ const Menu = () => {
               onTabSwitch={onTabSwitch}
             />
           }
-          <div className='flex flex-row mx-3'>
+          <div className='flex flex-row mx-3 max-sm:flex-col'>
             {
               products.products[activeTabIndex] && products.products[activeTabIndex].products.map((product, idx) => {
                 return (
