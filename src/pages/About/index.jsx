@@ -1,10 +1,10 @@
 import React from 'react'
-import aboutImage from '../assets/images/about-image.png';
+import aboutImage from '../../assets/images/about-image.png';
 
 export const About = () => {
   return (
-    <div className="bg-white">
-        <div className="p-24 grid grid-cols-2">
+    <div className="bg-white h-max">
+        <div className="p-9 md:p-24 grid grid-cols-2 max-sm:grid-cols-1 gap-8">
             <div className="">
                 <h2 className="text-3xl font-medium pb-6">About Us</h2>
                 <p className='text-lg'>
@@ -21,3 +21,5 @@ export const About = () => {
     </div>
   )
 }
+
+export default About;
