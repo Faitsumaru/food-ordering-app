@@ -66,3 +66,38 @@ REACT_APP_FIREBASE_CONFIG_MESSAGING_SENDER_ID=""
 REACT_APP_FIREBASE_CONFIG_APP_ID=""
 REACT_APP_FIREBASE_CONFIG_MEASUREMENT_ID=""
 ```
+
+## Documentation
+* Tailwind: https://tailwindcss.com/docs/installation;
+* React: 
+    * https://reactjs.org/docs/getting-started.html;
+    * https://www.codecademy.com/learn/react-101;
+* React Router: https://reactrouter.com/en/main;
+* Firebase (auth): 
+    * https://console.firebase.google.com/u/0/;
+    * https://firebase.google.com/docs;
+* Remix: https://remix.run/docs/en/v1/guides/routing;
+* Postman: 
+    * https://web.postman.co/workspaces;
+    * https://learning.postman.com/docs/getting-started/introduction/;
+* Faker: https://fakerjs.dev/guide/;
+* MongoDB: 
+    * https://www.mongodb.com/;
+    * https://www.mongodb.com/docs/;
+* Redux Thunk: https://www.npmjs.com/package/redux-thunk;
+* Stripe: 
+    * https://stripe.com/;
+    * https://stripe.com/docs/webhooks/quickstart;
+* clsx: https://www.npmjs.com/package/clsx;
+* Lodash: 
+    * https://lodash.com/;
+    * https://lodash.com/docs/;
+* React-Toastify: https://www.npmjs.com/package/react-toastify;
+* Redux:
+    * https://redux.js.org/;
+    * https://redux.js.org/introduction/getting-started;
+* React Hook Form: https://react-hook-form.com/get-started/;
+* Git: 
+    * https://git-scm.com/;
+    * https://githowto.com/ru;
+* React-multi-carousel: https://www.npmjs.com/package/react-multi-carousel?activeTab=dependencies;
